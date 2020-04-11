@@ -21,10 +21,18 @@ describe('Employees page', () => {
       {
         id: 'employee-1',
         name: 'Walter White',
+        group: {
+          id: 1,
+          name: 'Chemist',
+        },
       },
       {
         id: 'employee-2',
         name: 'Jessie Pinkman',
+        group: {
+          id: 1,
+          name: 'Commercial',
+        },
       },
     ];
     const filteredPersons = allPersonsResult.filter((x) => x.name.indexOf('Walter') >= 0);

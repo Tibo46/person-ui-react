@@ -57,7 +57,7 @@ const Employees = () => {
                         {person.name}
                       </Typography>
                       <Typography variant="body2" color="textSecondary" component="p">
-                        {/* {party.description.slice(0, 130)} */}
+                        {person.group.name}
                       </Typography>
                     </CardContent>
                   </CardActionArea>

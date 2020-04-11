@@ -201,7 +201,9 @@ Array [
               </h2>
               <p
                 className="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary"
-              />
+              >
+                Chemist
+              </p>
             </mui-card-content>
           </mui-card-action>
         </mui-card>
@@ -223,7 +225,9 @@ Array [
               </h2>
               <p
                 className="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary"
-              />
+              >
+                Commercial
+              </p>
             </mui-card-content>
           </mui-card-action>
         </mui-card>

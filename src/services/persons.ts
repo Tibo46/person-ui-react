@@ -1,9 +1,11 @@
 import * as t from 'io-ts';
 import { get } from '../utils/http';
+import { Group } from './groups';
 
 export const Person = t.strict({
   id: t.string,
   name: t.string,
+  group: Group,
 });
 export type Person = t.TypeOf<typeof Person>;
 
