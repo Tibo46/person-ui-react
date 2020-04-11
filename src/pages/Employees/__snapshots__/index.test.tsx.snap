@@ -1,0 +1,234 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Employees page renders the page 1`] = `
+Array [
+  <h1
+    className="MuiTypography-root MuiTypography-h1"
+  >
+    All your employees
+  </h1>,
+  <div
+    className="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth"
+  >
+    <label
+      className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+      data-shrink={false}
+    >
+      Start typing to filter employees
+    </label>
+    <div
+      className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+      onClick={[Function]}
+    >
+      <input
+        aria-invalid={false}
+        autoComplete="off"
+        autoFocus={false}
+        className="MuiInputBase-input MuiOutlinedInput-input"
+        disabled={false}
+        name="filter"
+        onAnimationStart={[Function]}
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        required={false}
+        type="text"
+        value=""
+      />
+      <fieldset
+        aria-hidden={true}
+        className="PrivateNotchedOutline-root MuiOutlinedInput-notchedOutline"
+      >
+        <legend
+          className="PrivateNotchedOutline-legendLabelled"
+        >
+          <span>
+            Start typing to filter employees
+          </span>
+        </legend>
+      </fieldset>
+    </div>
+  </div>,
+  <div
+    className="container"
+  >
+    <mui-grid
+      container={true}
+      spacing={1}
+    >
+      <div
+        className="makeStyles-loader"
+      />
+    </mui-grid>
+  </div>,
+]
+`;
+
+exports[`Employees page should render a loader while fetching data and then display the data 1`] = `
+Array [
+  <h1
+    className="MuiTypography-root MuiTypography-h1"
+  >
+    All your employees
+  </h1>,
+  <div
+    className="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth"
+  >
+    <label
+      className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+      data-shrink={false}
+    >
+      Start typing to filter employees
+    </label>
+    <div
+      className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+      onClick={[Function]}
+    >
+      <input
+        aria-invalid={false}
+        autoComplete="off"
+        autoFocus={false}
+        className="MuiInputBase-input MuiOutlinedInput-input"
+        disabled={false}
+        name="filter"
+        onAnimationStart={[Function]}
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        required={false}
+        type="text"
+        value=""
+      />
+      <fieldset
+        aria-hidden={true}
+        className="PrivateNotchedOutline-root MuiOutlinedInput-notchedOutline"
+      >
+        <legend
+          className="PrivateNotchedOutline-legendLabelled"
+        >
+          <span>
+            Start typing to filter employees
+          </span>
+        </legend>
+      </fieldset>
+    </div>
+  </div>,
+  <div
+    className="container"
+  >
+    <mui-grid
+      container={true}
+      spacing={1}
+    >
+      <div
+        className="makeStyles-loader"
+      />
+    </mui-grid>
+  </div>,
+]
+`;
+
+exports[`Employees page should render a loader while fetching data and then display the data 2`] = `
+Array [
+  <h1
+    className="MuiTypography-root MuiTypography-h1"
+  >
+    All your employees
+  </h1>,
+  <div
+    className="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth"
+  >
+    <label
+      className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+      data-shrink={false}
+    >
+      Start typing to filter employees
+    </label>
+    <div
+      className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+      onClick={[Function]}
+    >
+      <input
+        aria-invalid={false}
+        autoComplete="off"
+        autoFocus={false}
+        className="MuiInputBase-input MuiOutlinedInput-input"
+        disabled={false}
+        name="filter"
+        onAnimationStart={[Function]}
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        required={false}
+        type="text"
+        value=""
+      />
+      <fieldset
+        aria-hidden={true}
+        className="PrivateNotchedOutline-root MuiOutlinedInput-notchedOutline"
+      >
+        <legend
+          className="PrivateNotchedOutline-legendLabelled"
+        >
+          <span>
+            Start typing to filter employees
+          </span>
+        </legend>
+      </fieldset>
+    </div>
+  </div>,
+  <div
+    className="container"
+  >
+    <mui-grid
+      container={true}
+      spacing={1}
+    >
+      <mui-grid
+        item={true}
+        md={4}
+        sm={6}
+        xl={3}
+        xs={12}
+      >
+        <mui-card>
+          <mui-card-action>
+            <mui-card-content>
+              <h2
+                className="MuiTypography-root MuiTypography-h2 MuiTypography-gutterBottom"
+              >
+                Walter White
+              </h2>
+              <p
+                className="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary"
+              />
+            </mui-card-content>
+          </mui-card-action>
+        </mui-card>
+      </mui-grid>
+      <mui-grid
+        item={true}
+        md={4}
+        sm={6}
+        xl={3}
+        xs={12}
+      >
+        <mui-card>
+          <mui-card-action>
+            <mui-card-content>
+              <h2
+                className="MuiTypography-root MuiTypography-h2 MuiTypography-gutterBottom"
+              >
+                Jessie Pinkman
+              </h2>
+              <p
+                className="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary"
+              />
+            </mui-card-content>
+          </mui-card-action>
+        </mui-card>
+      </mui-grid>
+    </mui-grid>
+  </div>,
+]
+`;

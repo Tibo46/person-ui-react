@@ -32,12 +32,6 @@ interface IPostRequest extends Omit<IHttpRequest, 'body'> {
   body?: {};
 }
 
-function decode<a>(type: t.Type<a, any, t.mixed>, data: unknown): a {
-  const decoded = type.decode(data);
-
-  return decoded.right;
-}
-
 async function send<a>(
   type: t.Type<a, any, t.mixed>,
   { url, headers = {}, ...options }: IHttpRequest
@@ -59,7 +53,7 @@ async function send<a>(
     data = await res.clone().json();
   }
 
-  return type.decode(data);
+  return data;
 }
 
 export async function get<a>(type: t.Type<a, any, t.mixed>, request: IHttpRequest): Promise<a> {

@@ -15,8 +15,10 @@ interface SearchPersonQuery {
   search: string;
 }
 export async function searchPersons({ query }: { query: SearchPersonQuery }): Promise<Person[]> {
+  const searchTerms = query.search ? `?searchTerms=${query.search}` : '';
+
   const res = await get(SearchResponse, {
-    url: `${window.ENV_DATA.personApiOrigin}/persons/search?searchTerms=${query.search}`,
+    url: `${window.ENV_DATA.personApiOrigin}/persons/search${searchTerms}`,
   });
 
   return res;

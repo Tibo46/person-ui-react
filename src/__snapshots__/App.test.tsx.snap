@@ -1,0 +1,183 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App App should render 1`] = `
+<div
+  className="makeStyles-root"
+>
+  <header
+    className="makeStyles-mobileHeader"
+  />
+  <mui-drawer
+    className="makeStyles-drawer"
+    variant="permanent"
+  >
+    <div
+      className="makeStyles-toolbar"
+    >
+      <a
+        className="makeStyles-link makeStyles-homeLink"
+        href="/"
+        onClick={[Function]}
+      >
+        <img
+          alt="Logo"
+          className="makeStyles-logo"
+          src="logo.png"
+        />
+      </a>
+    </div>
+    <hr
+      className="MuiDivider-root"
+    />
+    <ul
+      className="MuiList-root MuiList-padding"
+    >
+      <div
+        aria-disabled={false}
+        className="MuiButtonBase-root MuiListItem-root makeStyles-listButton MuiListItem-gutters MuiListItem-button"
+        onBlur={[Function]}
+        onDragLeave={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        role="button"
+        tabIndex={0}
+      >
+        <a
+          className="makeStyles-link makeStyles-listItemLink"
+          href="/employees"
+          onClick={[Function]}
+        >
+          <mui-list-item-icon
+            className="makeStyles-listItemIcon"
+          >
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root makeStyles-listIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M17 10H7v2h10v-2zm2-7h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zm-5-5H7v2h7v-2z"
+              />
+            </svg>
+          </mui-list-item-icon>
+          <mui-list-item-text
+            primary="All Employees"
+          />
+        </a>
+      </div>
+      <div
+        aria-disabled={false}
+        className="MuiButtonBase-root MuiListItem-root makeStyles-listButton MuiListItem-gutters MuiListItem-button"
+        onBlur={[Function]}
+        onDragLeave={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        role="button"
+        tabIndex={0}
+      >
+        <a
+          className="makeStyles-link makeStyles-listItemLink"
+          href="/employees/create"
+          onClick={[Function]}
+        >
+          <mui-list-item-icon
+            className="makeStyles-listItemIcon"
+          >
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root makeStyles-listIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M16.53 11.06L15.47 10l-4.88 4.88-2.12-2.12-1.06 1.06L10.59 17l5.94-5.94zM19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11z"
+              />
+            </svg>
+          </mui-list-item-icon>
+          <mui-list-item-text
+            primary="Add Employee"
+          />
+        </a>
+      </div>
+      <hr
+        className="MuiDivider-root"
+      />
+      <div
+        aria-disabled={false}
+        className="MuiButtonBase-root MuiListItem-root makeStyles-listButton MuiListItem-gutters MuiListItem-button"
+        onBlur={[Function]}
+        onDragLeave={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        role="button"
+        tabIndex={0}
+      >
+        <a
+          className="makeStyles-link makeStyles-listItemLink"
+          href="/employees/create"
+          onClick={[Function]}
+        >
+          <mui-list-item-icon
+            className="makeStyles-listItemIcon"
+          >
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root makeStyles-listIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+              />
+            </svg>
+          </mui-list-item-icon>
+          <mui-list-item-text
+            primary="Add Employee"
+          />
+        </a>
+      </div>
+    </ul>
+  </mui-drawer>
+  <main
+    className="makeStyles-container"
+  >
+    <div>
+      <h1>
+        Welcome to your Hotel admin panel
+      </h1>
+      <h2>
+        Manage your employees easily
+      </h2>
+      <p>
+        You can use the search bar on the header to look for any specific employee or group of employee.
+        <br />
+        To see all of them, use the Employee page.
+        <br />
+        If you have a new hire, don't forget to add him into the system via the Employee Create page!
+      </p>
+    </div>
+  </main>
+</div>
+`;
