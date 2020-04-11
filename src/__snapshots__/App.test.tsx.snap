@@ -92,7 +92,7 @@ exports[`App App should render 1`] = `
       >
         <a
           className="makeStyles-link makeStyles-listItemLink"
-          href="/employees/create"
+          href="/employees/add"
           onClick={[Function]}
         >
           <mui-list-item-icon
@@ -165,7 +165,7 @@ exports[`App App should render 1`] = `
   >
     <div>
       <h1>
-        Welcome to your Hotel admin panel
+        Welcome to your HR admin panel
       </h1>
       <h2>
         Manage your employees easily
@@ -173,9 +173,26 @@ exports[`App App should render 1`] = `
       <p>
         You can use the search bar on the header to look for any specific employee or group of employee.
         <br />
-        To see all of them, use the Employee page.
+        To see all of them, use the 
+        <a
+          className="makeStyles-link undefined"
+          href="/employees"
+          onClick={[Function]}
+        >
+          Employee page
+        </a>
+        .
         <br />
-        If you have a new hire, don't forget to add him into the system via the Employee Create page!
+        If you have a new hire, don't forget to add him/her into the system via the
+         
+        <a
+          className="makeStyles-link undefined"
+          href="/employees/add"
+          onClick={[Function]}
+        >
+          Employee Create page
+        </a>
+        !
       </p>
     </div>
   </main>

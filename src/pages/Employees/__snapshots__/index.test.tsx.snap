@@ -64,6 +64,136 @@ Array [
 ]
 `;
 
+exports[`Employees page should display a loader and then a message saying there is no data, if no data found 1`] = `
+Array [
+  <h1
+    className="MuiTypography-root MuiTypography-h1"
+  >
+    All your employees
+  </h1>,
+  <div
+    className="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth"
+  >
+    <label
+      className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+      data-shrink={false}
+    >
+      Start typing to filter employees
+    </label>
+    <div
+      className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+      onClick={[Function]}
+    >
+      <input
+        aria-invalid={false}
+        autoComplete="off"
+        autoFocus={false}
+        className="MuiInputBase-input MuiOutlinedInput-input"
+        disabled={false}
+        name="filter"
+        onAnimationStart={[Function]}
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        required={false}
+        type="text"
+        value=""
+      />
+      <fieldset
+        aria-hidden={true}
+        className="PrivateNotchedOutline-root MuiOutlinedInput-notchedOutline"
+      >
+        <legend
+          className="PrivateNotchedOutline-legendLabelled"
+        >
+          <span>
+            Start typing to filter employees
+          </span>
+        </legend>
+      </fieldset>
+    </div>
+  </div>,
+  <div
+    className="container"
+  >
+    <mui-grid
+      container={true}
+      spacing={1}
+    >
+      <div
+        className="makeStyles-loader"
+      />
+    </mui-grid>
+  </div>,
+]
+`;
+
+exports[`Employees page should display a loader and then a message saying there is no data, if no data found 2`] = `
+Array [
+  <h1
+    className="MuiTypography-root MuiTypography-h1"
+  >
+    All your employees
+  </h1>,
+  <div
+    className="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth"
+  >
+    <label
+      className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+      data-shrink={false}
+    >
+      Start typing to filter employees
+    </label>
+    <div
+      className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+      onClick={[Function]}
+    >
+      <input
+        aria-invalid={false}
+        autoComplete="off"
+        autoFocus={false}
+        className="MuiInputBase-input MuiOutlinedInput-input"
+        disabled={false}
+        name="filter"
+        onAnimationStart={[Function]}
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        required={false}
+        type="text"
+        value=""
+      />
+      <fieldset
+        aria-hidden={true}
+        className="PrivateNotchedOutline-root MuiOutlinedInput-notchedOutline"
+      >
+        <legend
+          className="PrivateNotchedOutline-legendLabelled"
+        >
+          <span>
+            Start typing to filter employees
+          </span>
+        </legend>
+      </fieldset>
+    </div>
+  </div>,
+  <div
+    className="container"
+  >
+    <mui-grid
+      container={true}
+      spacing={1}
+    >
+      <p
+        className="MuiTypography-root makeStyles-noData MuiTypography-body1"
+      >
+        There is no employee yet. Please add a new one.
+      </p>
+    </mui-grid>
+  </div>,
+]
+`;
+
 exports[`Employees page should render a loader while fetching data and then display the data 1`] = `
 Array [
   <h1

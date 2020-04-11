@@ -21,6 +21,7 @@ describe('Employees page', () => {
       {
         id: 'employee-1',
         name: 'Walter White',
+        groupId: 1,
         group: {
           id: 1,
           name: 'Chemist',
@@ -29,21 +30,19 @@ describe('Employees page', () => {
       {
         id: 'employee-2',
         name: 'Jessie Pinkman',
+        groupId: 2,
         group: {
-          id: 1,
+          id: 2,
           name: 'Commercial',
         },
       },
     ];
     const filteredPersons = allPersonsResult.filter((x) => x.name.indexOf('Walter') >= 0);
 
+    fetchMock.get(`${window.ENV_DATA.personApiOrigin}/persons/search`, allPersonsResult);
     fetchMock.get(
-      (url) => url === `${window.ENV_DATA.personApiOrigin}/persons/search`,
-      () => allPersonsResult
-    );
-    fetchMock.get(
-      (url) => url === `${window.ENV_DATA.personApiOrigin}/persons/search?searchTerms=Walter`,
-      () => filteredPersons
+      `${window.ENV_DATA.personApiOrigin}/persons/search?searchTerms=Walter`,
+      filteredPersons
     );
   });
 
@@ -72,6 +71,25 @@ describe('Employees page', () => {
     expect(component!.toJSON()).toMatchSnapshot();
   });
 
+  it('should display a loader and then a message saying there is no data, if no data found', async () => {
+    fetchMock.get(`${window.ENV_DATA.personApiOrigin}/persons/search`, [], {
+      overwriteRoutes: true,
+    });
+
+    let component: renderer.ReactTestRenderer;
+    renderer.act(() => {
+      component = renderer.create(<Employees />);
+    });
+
+    expect(component!.toJSON()).toMatchSnapshot();
+
+    await renderer.act(async () => {
+      await delay();
+    });
+
+    expect(component!.toJSON()).toMatchSnapshot();
+  });
+
   it('should get filtered employees if the search terms change', async () => {
     let component: ReactWrapper;
     await act(async () => {
@@ -83,8 +101,8 @@ describe('Employees page', () => {
 
     await act(async () => {
       component.find('input[name="filter"]').simulate('change', { target: { value: 'Walter' } });
-      await delay();
     });
+    component!.update();
 
     expect(fetchMock.calls()).toHaveLength(2);
     expect(fetchMock.calls()[1][0]).toContain('Walter');

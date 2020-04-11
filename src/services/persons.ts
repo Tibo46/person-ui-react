@@ -1,12 +1,14 @@
 import * as t from 'io-ts';
-import { get } from '../utils/http';
+import { get, post } from '../utils/http';
 import { Group } from './groups';
 
-export const Person = t.strict({
-  id: t.string,
-  name: t.string,
-  group: Group,
-});
+export const Person = t.intersection([
+  t.partial({ id: t.string, group: Group }),
+  t.strict({
+    name: t.string,
+    groupId: t.number,
+  }),
+]);
 export type Person = t.TypeOf<typeof Person>;
 
 export const SearchResponse = t.array(Person);
@@ -32,6 +34,15 @@ interface GetPersonQuery {
 export async function getPerson({ query }: { query: GetPersonQuery }): Promise<Person> {
   const res = await get(Person, {
     url: `${window.ENV_DATA.personApiOrigin}/persons/${query.id}`,
+  });
+
+  return res;
+}
+
+export async function addPerson(person: Person): Promise<Person> {
+  const res = await post(Person, {
+    url: `${window.ENV_DATA.personApiOrigin}/persons`,
+    body: person,
   });
 
   return res;

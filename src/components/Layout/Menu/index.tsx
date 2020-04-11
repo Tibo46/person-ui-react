@@ -58,7 +58,7 @@ const Menu: React.FC<{ onLinkClicked?: any }> = ({ onLinkClicked }) => {
         </ListItem>
         <ListItem className={classes.listButton} button key="createEmployee">
           <Link
-            href="/employees/create"
+            href="/employees/add"
             className={classes.listItemLink}
             onClick={() => {
               onLinkClicked && onLinkClicked();
