@@ -132,7 +132,7 @@ const useStyles = makeStyles((theme: Theme) =>
       logo: {
         width: '50px',
       },
-      profileBtn: {
+      searchBtn: {
         position: 'static',
       },
     },

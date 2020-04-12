@@ -34,7 +34,7 @@ Array [
     Add a new employee
   </h1>,
   <p
-    className="MuiTypography-root makeStyles-noData MuiTypography-body1"
+    className="MuiTypography-root no-data MuiTypography-body1"
   >
     An error occured and we could not get the Groups. Please try again by refreshing the page.
   </p>,

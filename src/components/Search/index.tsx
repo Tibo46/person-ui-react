@@ -31,15 +31,13 @@ const useStyles = makeStyles({
   },
   employee: {
     display: 'flex',
+    width: '100%',
   },
   employeeName: {
     marginRight: '.5rem',
   },
   employeeGroup: {
     marginLeft: '.5rem',
-  },
-  noData: {
-    fontSize: '2.5rem',
   },
 });
 
@@ -97,7 +95,11 @@ const Search = () => {
               (personsResult.data && personsResult.data.length > 0 ? (
                 personsResult.data.map((person: Person, index: number) => (
                   <ListItem button key={`person-${person.id}`}>
-                    <Link href={`/employees/${person.id}`} className={classes.employee}>
+                    <Link
+                      href={`/employees/details/${person.id}`}
+                      className={classes.employee}
+                      onClick={handleClose}
+                    >
                       <ListItemText primary={person.name} className={classes.employeeName} />
                       <ListItemText
                         primary={person.group?.name}
@@ -107,7 +109,7 @@ const Search = () => {
                   </ListItem>
                 ))
               ) : (
-                <Typography className={classes.noData} id="no-data">
+                <Typography className={`no-data`} id="no-data">
                   No employee found
                 </Typography>
               ))}

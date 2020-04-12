@@ -9,12 +9,9 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
 import { makeStyles } from '@material-ui/core/styles';
 import { TextField } from '@material-ui/core';
+import Link from '../../components/Link';
 
-const useStyles = makeStyles({
-  noData: {
-    fontSize: '2.5rem',
-  },
-});
+const useStyles = makeStyles({});
 
 const Employees = () => {
   const classes = useStyles();
@@ -52,20 +49,22 @@ const Employees = () => {
               <Grid item={true} key={`party-${index}`} xl={3} md={4} sm={6} xs={12}>
                 <Card>
                   <CardActionArea>
-                    <CardContent>
-                      <Typography gutterBottom variant="h2">
-                        {person.name}
-                      </Typography>
-                      <Typography variant="body2" color="textSecondary" component="p">
-                        {person.group?.name}
-                      </Typography>
-                    </CardContent>
+                    <Link href={`employees/details/${person.id}`}>
+                      <CardContent>
+                        <Typography gutterBottom variant="h2">
+                          {person.name}
+                        </Typography>
+                        <Typography variant="body2" color="textSecondary" component="p">
+                          {person.group?.name}
+                        </Typography>
+                      </CardContent>
+                    </Link>
                   </CardActionArea>
                 </Card>
               </Grid>
             ))
           ) : (
-            <Typography className={classes.noData}>
+            <Typography className={`no-data`}>
               There is no employee yet. Please add a new one.
             </Typography>
           )}

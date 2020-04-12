@@ -10,11 +10,7 @@ import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
 import Loader from '../../../components/Loader';
 
-const useStyles = makeStyles({
-  noData: {
-    fontSize: '2.5rem',
-  },
-});
+const useStyles = makeStyles({});
 
 const CreateEmployee = () => {
   const classes = useStyles();
@@ -109,7 +105,7 @@ const CreateEmployee = () => {
           </Grid>
         </form>
       ) : (
-        <Typography className={classes.noData}>
+        <Typography className={`no-data`}>
           An error occured and we could not get the Groups. Please try again by refreshing the page.
         </Typography>
       )}

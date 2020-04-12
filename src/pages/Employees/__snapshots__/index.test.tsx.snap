@@ -185,7 +185,7 @@ Array [
       spacing={1}
     >
       <p
-        className="MuiTypography-root makeStyles-noData MuiTypography-body1"
+        className="MuiTypography-root no-data MuiTypography-body1"
       >
         There is no employee yet. Please add a new one.
       </p>
@@ -323,18 +323,24 @@ Array [
       >
         <mui-card>
           <mui-card-action>
-            <mui-card-content>
-              <h2
-                className="MuiTypography-root MuiTypography-h2 MuiTypography-gutterBottom"
-              >
-                Walter White
-              </h2>
-              <p
-                className="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary"
-              >
-                Chemist
-              </p>
-            </mui-card-content>
+            <a
+              className="makeStyles-link undefined"
+              href="/employees/details/employee-1"
+              onClick={[Function]}
+            >
+              <mui-card-content>
+                <h2
+                  className="MuiTypography-root MuiTypography-h2 MuiTypography-gutterBottom"
+                >
+                  Walter White
+                </h2>
+                <p
+                  className="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary"
+                >
+                  Chemist
+                </p>
+              </mui-card-content>
+            </a>
           </mui-card-action>
         </mui-card>
       </mui-grid>
@@ -347,18 +353,24 @@ Array [
       >
         <mui-card>
           <mui-card-action>
-            <mui-card-content>
-              <h2
-                className="MuiTypography-root MuiTypography-h2 MuiTypography-gutterBottom"
-              >
-                Jessie Pinkman
-              </h2>
-              <p
-                className="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary"
-              >
-                Commercial
-              </p>
-            </mui-card-content>
+            <a
+              className="makeStyles-link undefined"
+              href="/employees/details/employee-2"
+              onClick={[Function]}
+            >
+              <mui-card-content>
+                <h2
+                  className="MuiTypography-root MuiTypography-h2 MuiTypography-gutterBottom"
+                >
+                  Jessie Pinkman
+                </h2>
+                <p
+                  className="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary"
+                >
+                  Commercial
+                </p>
+              </mui-card-content>
+            </a>
           </mui-card-action>
         </mui-card>
       </mui-grid>

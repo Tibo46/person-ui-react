@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Employees Details renders the page 1`] = `
+<div
+  className="makeStyles-loader"
+/>
+`;
+
+exports[`Employees Details should display a loader and then a message saying there is no data, if no data found 1`] = `
+<div
+  className="makeStyles-loader"
+/>
+`;
+
+exports[`Employees Details should display a loader and then a message saying there is no data, if no data found 2`] = `
+<p
+  className="MuiTypography-root no-data MuiTypography-body1"
+>
+  This employee does not exists
+</p>
+`;
+
+exports[`Employees Details should render a loader while fetching data and then display the data 1`] = `
+<div
+  className="makeStyles-loader"
+/>
+`;
+
+exports[`Employees Details should render a loader while fetching data and then display the data 2`] = `
+Array [
+  <h1
+    className="MuiTypography-root MuiTypography-h1"
+  >
+    Walter White
+  </h1>,
+  <p
+    className="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary"
+  >
+    Chemist
+  </p>,
+]
+`;

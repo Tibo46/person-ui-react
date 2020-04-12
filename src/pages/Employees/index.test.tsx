@@ -1,7 +1,7 @@
 import React from 'react';
 import { act } from 'react-dom/test-utils';
 import fetchMock from 'fetch-mock';
-
+import { MemoryRouter as Router } from 'react-router-dom';
 import renderer from 'react-test-renderer';
 import { mount, ReactWrapper } from 'enzyme';
 import Employees from '.';
@@ -51,7 +51,11 @@ describe('Employees page', () => {
   });
 
   it('renders the page', async () => {
-    const component = renderer.create(<Employees />);
+    const component = renderer.create(
+      <Router>
+        <Employees />
+      </Router>
+    );
 
     expect(component!.toJSON()).toMatchSnapshot();
   });
@@ -59,7 +63,11 @@ describe('Employees page', () => {
   it('should render a loader while fetching data and then display the data', async () => {
     let component: renderer.ReactTestRenderer;
     renderer.act(() => {
-      component = renderer.create(<Employees />);
+      component = renderer.create(
+        <Router>
+          <Employees />
+        </Router>
+      );
     });
 
     expect(component!.toJSON()).toMatchSnapshot();
@@ -78,7 +86,11 @@ describe('Employees page', () => {
 
     let component: renderer.ReactTestRenderer;
     renderer.act(() => {
-      component = renderer.create(<Employees />);
+      component = renderer.create(
+        <Router>
+          <Employees />
+        </Router>
+      );
     });
 
     expect(component!.toJSON()).toMatchSnapshot();
@@ -93,7 +105,11 @@ describe('Employees page', () => {
   it('should get filtered employees if the search terms change', async () => {
     let component: ReactWrapper;
     await act(async () => {
-      component = mount(<Employees />);
+      component = mount(
+        <Router>
+          <Employees />
+        </Router>
+      );
     });
 
     expect(fetchMock.calls()).toHaveLength(1);
