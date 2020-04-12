@@ -7,14 +7,10 @@ import Grid from '@material-ui/core/Grid';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
-import { makeStyles } from '@material-ui/core/styles';
 import { TextField } from '@material-ui/core';
 import Link from '../../components/Link';
 
-const useStyles = makeStyles({});
-
 const Employees = () => {
-  const classes = useStyles();
   const [filter, setFilter] = React.useState('');
 
   // @ts-ignore

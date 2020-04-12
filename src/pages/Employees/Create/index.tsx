@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useAsync } from 'react-async';
+import { useHistory } from 'react-router';
 import { getGroups } from '../../../services/groups';
 import { Person, addPerson } from '../../../services/persons';
 import Typography from '@material-ui/core/Typography';
@@ -7,13 +8,10 @@ import Grid from '@material-ui/core/Grid';
 import TextField from '@material-ui/core/TextField';
 import MenuItem from '@material-ui/core/MenuItem';
 import Button from '@material-ui/core/Button';
-import { makeStyles } from '@material-ui/core/styles';
 import Loader from '../../../components/Loader';
 
-const useStyles = makeStyles({});
-
 const CreateEmployee = () => {
-  const classes = useStyles();
+  const history = useHistory();
   const [employeeGroup, setEmployeeGroup] = useState(1);
   const [employeeName, setEmployeeName] = useState('');
 
@@ -33,9 +31,7 @@ const CreateEmployee = () => {
       let newPerson: Person;
       try {
         newPerson = await addPerson(person);
-
-        // Here we will redirect the user to the newly created Employee
-        console.log('person added', newPerson);
+        history.push(`/employees/details/${newPerson.id}`);
       } catch (error) {
         console.error(error);
       }

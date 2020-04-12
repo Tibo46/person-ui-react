@@ -7,6 +7,9 @@ import { mount, ReactWrapper } from 'enzyme';
 import CreateEmployee from '.';
 import { GroupResponse } from '../../../services/groups';
 
+let mockHistory: any;
+jest.mock('react-router', () => ({ useHistory: () => mockHistory }));
+
 const delay = (time = 0) => new Promise((res) => setTimeout(res, time));
 
 window.ENV_DATA = {
@@ -17,6 +20,7 @@ describe('Create Employee page', () => {
   let allGroupsResult: GroupResponse;
 
   beforeEach(() => {
+    mockHistory = { push: jest.fn() };
     allGroupsResult = [
       {
         id: 1,
@@ -121,5 +125,31 @@ describe('Create Employee page', () => {
     expect(fetchMock.calls()[1][1]?.body).toBe(
       JSON.stringify({ name: 'Gustavo Fring', groupId: 1 })
     );
+  });
+
+  it('should redirect the user af', async () => {
+    let component: ReactWrapper;
+    await act(async () => {
+      component = mount(<CreateEmployee />);
+    });
+
+    await act(async () => {
+      await delay();
+    });
+    component!.update();
+
+    expect(mockHistory.push).not.toHaveBeenCalled();
+
+    await act(async () => {
+      component
+        .find('input[name="employee-name"]')
+        .simulate('change', { target: { value: 'Gustavo Fring' } });
+    });
+    component!.update();
+    await act(async () => {
+      component.find('form').simulate('submit');
+    });
+
+    expect(mockHistory.push).toHaveBeenCalled();
   });
 });
