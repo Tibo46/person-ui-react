@@ -36,3 +36,11 @@ jest.mock('@material-ui/core/ListItemIcon', () => (props) => <mui-list-item-icon
 jest.mock('@material-ui/core/Grid', () => (props) => <mui-grid {...props} />);
 
 jest.mock('@material-ui/core/Button', () => (props) => <mui-button {...props} />);
+jest.mock('@material-ui/core/IconButton', () => (props) => <mui-icon-button {...props} />);
+jest.mock('@material-ui/icons/Search', () => (props) => <mui-icon-search {...props} />);
+
+jest.mock('@material-ui/core/Dialog', () => ({ open, ...props }) =>
+  open ? <mui-dialog open={open} {...props} /> : null
+);
+jest.mock('@material-ui/core/DialogContent', () => (props) => <mui-dialog-content {...props} />);
+jest.mock('@material-ui/core/DialogActions', () => (props) => <mui-dialog-actions {...props} />);

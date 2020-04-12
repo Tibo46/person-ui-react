@@ -21,20 +21,88 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+    <title>Employee Manager</title>
+
+    <style>
+      body.loading {
+        overflow: hidden;
+      }
+
+      .splash-screen {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: #edf0f3;
+        text-align: center;
+        align-items: center;
+        display: flex;
+        z-index: 2000;
+
+        opacity: 0;
+        visibility: hidden;
+        transition: visibility 0.3s linear 0s, opacity 0.3s ease 0s;
+      }
+
+      body.loading .splash-screen {
+        opacity: 1;
+        visibility: visible;
+        transition: visibility 0s linear 0s, opacity 0.3s ease 0s;
+      }
+      .loader {
+        position: relative;
+        height: 150px;
+        width: 150px;
+        background: #edf0f3;
+        border-radius: 50%;
+        margin: 0 auto;
+        box-shadow: inset -7px -7px 25px 0 rgba(237, 240, 243, 0.5),
+          inset 7px 7px 25px 0 rgba(0, 0, 0, 0.5);
+      }
+      .loader::before {
+        content: '';
+        position: absolute;
+        height: 130px;
+        width: 130px;
+        background: #edf0f3;
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        box-shadow: -7px -7px 25px 0 rgba(237, 240, 243, 0.9), 7px 7px 25px 0 rgba(0, 0, 0, 0.3);
+      }
+      .loader::after {
+        content: '';
+        position: absolute;
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: 15px solid #ef4f84;
+        border-right: solid 15px transparent;
+        border-top: solid 15px transparent;
+        border-left: solid 15px transparent;
+        animation: spin 0.5s infinite linear;
+      }
+      @keyframes spin {
+        0% {
+          transform: translate(-50%, -50%) rotate(0deg);
+        }
+        100% {
+          transform: translate(-50%, -50%) rotate(360deg);
+        }
+      }
+    </style>
   </head>
-  <body>
+  <body class="loading">
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+    <div id="splash-screen" class="splash-screen active">
+      <div class="loader"></div>
+    </div>
   </body>
 </html>

@@ -6,11 +6,9 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import EventNoteIcon from '@material-ui/icons/EventNote';
 import EventAvailableIcon from '@material-ui/icons/EventAvailable';
-import SearchIcon from '@material-ui/icons/Search';
 import makeStyles from '@material-ui/core/styles/makeStyles';
 import { Theme } from '@material-ui/core/styles/createMuiTheme';
 import createStyles from '@material-ui/core/styles/createStyles';
-import Divider from '@material-ui/core/Divider/Divider';
 import Link from '../../Link';
 
 const drawerWidth = 87;
@@ -66,21 +64,6 @@ const Menu: React.FC<{ onLinkClicked?: any }> = ({ onLinkClicked }) => {
           >
             <ListItemIcon className={classes.listItemIcon}>
               <EventAvailableIcon className={classes.listIcon} />
-            </ListItemIcon>
-            <ListItemText primary="Add Employee" />
-          </Link>
-        </ListItem>
-        <Divider />
-        <ListItem className={classes.listButton} button key="searchEmployee">
-          <Link
-            href="/employees/create"
-            className={classes.listItemLink}
-            onClick={() => {
-              onLinkClicked && onLinkClicked();
-            }}
-          >
-            <ListItemIcon className={classes.listItemIcon}>
-              <SearchIcon className={classes.listIcon} />
             </ListItemIcon>
             <ListItemText primary="Add Employee" />
           </Link>

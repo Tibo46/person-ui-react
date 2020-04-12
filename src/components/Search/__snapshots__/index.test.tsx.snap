@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Search component renders the search button 1`] = `
+<mui-icon-button
+  onClick={[Function]}
+>
+  <mui-icon-search />
+</mui-icon-button>
+`;

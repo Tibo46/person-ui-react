@@ -94,7 +94,6 @@ describe('Employees page', () => {
     let component: ReactWrapper;
     await act(async () => {
       component = mount(<Employees />);
-      await delay();
     });
 
     expect(fetchMock.calls()).toHaveLength(1);

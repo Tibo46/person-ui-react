@@ -4,7 +4,7 @@ import Link from '../../components/Link';
 const Home: React.FC = () => {
   return (
     <div>
-      <h1>Welcome to your HR admin panel</h1>
+      <h1>Welcome to Employee Manager</h1>
       <h2>Manage your employees easily</h2>
       <p>
         You can use the search bar on the header to look for any specific employee or group of

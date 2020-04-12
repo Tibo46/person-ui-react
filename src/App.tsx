@@ -122,6 +122,8 @@ const theme = createMuiTheme({
 });
 
 function App() {
+  document.body.classList.remove('loading');
+
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />

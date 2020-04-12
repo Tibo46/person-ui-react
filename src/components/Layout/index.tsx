@@ -10,6 +10,7 @@ import Divider from '@material-ui/core/Divider';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import Menu from './Menu';
+import Search from '../Search';
 
 const drawerWidth = 87;
 
@@ -23,7 +24,7 @@ const useStyles = makeStyles((theme: Theme) =>
       flexGrow: 1,
       '& a': { color: '#fff' },
     },
-    profileBtn: {
+    searchBtn: {
       position: 'fixed',
       top: '5px',
       right: '5px',
@@ -164,6 +165,9 @@ const Layout: React.FC = ({ children }) => {
             </IconButton>
           </div>
         )}
+        <div className={classes.searchBtn}>
+          <Search />
+        </div>
       </header>
       {isMobile ? (
         <Drawer
