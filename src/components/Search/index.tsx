@@ -16,6 +16,7 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import Link from '../Link';
 import ListItemText from '@material-ui/core/ListItemText';
+import { ListItemAvatar, Avatar } from '@material-ui/core';
 
 const useStyles = makeStyles({
   loader: {
@@ -26,18 +27,15 @@ const useStyles = makeStyles({
     height: '30px',
   },
   dialogContent: {
-    minHeight: '105px',
+    minHeight: '135px',
     paddingTop: '1rem',
   },
   employee: {
     display: 'flex',
     width: '100%',
   },
-  employeeName: {
-    marginRight: '.5rem',
-  },
-  employeeGroup: {
-    marginLeft: '.5rem',
+  inline: {
+    display: 'inline',
   },
 });
 
@@ -93,17 +91,30 @@ const Search = () => {
           <List>
             {filter &&
               (personsResult.data && personsResult.data.length > 0 ? (
-                personsResult.data.map((person: Person, index: number) => (
-                  <ListItem button key={`person-${person.id}`}>
+                personsResult.data.map((person: Person) => (
+                  <ListItem button alignItems="flex-start" key={`person-${person.id}`}>
                     <Link
                       href={`/employees/details/${person.id}`}
                       className={classes.employee}
                       onClick={handleClose}
                     >
-                      <ListItemText primary={person.name} className={classes.employeeName} />
+                      <ListItemAvatar>
+                        <Avatar alt={person.name} src={person.photo} />
+                      </ListItemAvatar>
                       <ListItemText
-                        primary={person.group?.name}
-                        className={classes.employeeGroup}
+                        primary={person.name}
+                        secondary={
+                          <React.Fragment>
+                            <Typography
+                              component="span"
+                              variant="body2"
+                              className={classes.inline}
+                              color="textPrimary"
+                            >
+                              {person.group?.name}
+                            </Typography>
+                          </React.Fragment>
+                        }
                       />
                     </Link>
                   </ListItem>

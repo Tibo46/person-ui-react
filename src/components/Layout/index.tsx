@@ -83,7 +83,7 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     container: {
       flexGrow: 1,
-      padding: '0rem 4rem 2rem 4rem',
+      padding: '3rem 4rem 2rem 4rem',
     },
     listButton: {
       padding: '0',
@@ -106,7 +106,7 @@ const useStyles = makeStyles((theme: Theme) =>
         flexDirection: 'column',
       },
       container: {
-        padding: '0rem 2rem 2rem 2rem',
+        padding: '2rem',
       },
       mobileHeader: {
         position: 'sticky',

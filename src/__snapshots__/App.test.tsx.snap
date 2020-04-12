@@ -130,14 +130,20 @@ exports[`App App should render 1`] = `
     className="makeStyles-container"
   >
     <div>
-      <h1>
+      <h1
+        className="MuiTypography-root MuiTypography-h1"
+      >
         Welcome to Employee Manager
       </h1>
-      <h2>
+      <h2
+        className="MuiTypography-root MuiTypography-h2"
+      >
         Manage your employees easily
       </h2>
-      <p>
-        You can use the search bar on the header to look for any specific employee or group of employee.
+      <p
+        className="MuiTypography-root MuiTypography-body1"
+      >
+        You can use the search button on the top right corner to look for any specific employee or group of employees.
         <br />
         To see all of them, use the 
         <a
@@ -157,6 +163,18 @@ exports[`App App should render 1`] = `
           onClick={[Function]}
         >
           Employee Create page
+        </a>
+        !
+      </p>
+      <p
+        className="MuiTypography-root makeStyles-covid MuiTypography-body2"
+      >
+        Don't forget to 
+        <a
+          className="makeStyles-link undefined"
+          href="https://www.gov.uk/coronavirus"
+        >
+          stay home
         </a>
         !
       </p>

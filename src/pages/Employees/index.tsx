@@ -7,10 +7,24 @@ import Grid from '@material-ui/core/Grid';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
-import { TextField } from '@material-ui/core';
+import { TextField, CardMedia, makeStyles, Theme, createStyles } from '@material-ui/core';
 import Link from '../../components/Link';
+import NoPhoto from '../../images/no-photo.jpg';
+
+const useStyles = makeStyles((theme: Theme) =>
+  createStyles({
+    search: {
+      marginBottom: '2rem',
+    },
+    photo: {
+      minHeight: '300px',
+      objectPosition: 'top',
+    },
+  })
+);
 
 const Employees = () => {
+  const classes = useStyles();
   const [filter, setFilter] = React.useState('');
 
   // @ts-ignore
@@ -26,6 +40,7 @@ const Employees = () => {
     <>
       <Typography variant="h1">All your employees</Typography>
       <TextField
+        className={classes.search}
         autoComplete="off"
         fullWidth={true}
         variant="outlined"
@@ -36,6 +51,7 @@ const Employees = () => {
           setFilter(e.target.value);
         }}
       />
+
       <div className={`container`}>
         <Grid container={true} spacing={1}>
           {personsResult.isLoading ? (
@@ -45,6 +61,14 @@ const Employees = () => {
               <Grid item={true} key={`party-${index}`} xl={3} md={4} sm={6} xs={12}>
                 <Card>
                   <CardActionArea>
+                    <CardMedia
+                      className={classes.photo}
+                      component="img"
+                      alt="Contemplative Reptile"
+                      height="140"
+                      image={person.photo ? person.photo : NoPhoto}
+                      title="Contemplative Reptile"
+                    />
                     <Link href={`employees/details/${person.id}`}>
                       <CardContent>
                         <Typography gutterBottom variant="h2">

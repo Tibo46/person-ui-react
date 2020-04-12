@@ -8,7 +8,7 @@ Array [
     All your employees
   </h1>,
   <div
-    className="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth"
+    className="MuiFormControl-root MuiTextField-root makeStyles-search MuiFormControl-fullWidth"
   >
     <label
       className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
@@ -72,7 +72,7 @@ Array [
     All your employees
   </h1>,
   <div
-    className="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth"
+    className="MuiFormControl-root MuiTextField-root makeStyles-search MuiFormControl-fullWidth"
   >
     <label
       className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
@@ -136,7 +136,7 @@ Array [
     All your employees
   </h1>,
   <div
-    className="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth"
+    className="MuiFormControl-root MuiTextField-root makeStyles-search MuiFormControl-fullWidth"
   >
     <label
       className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
@@ -202,7 +202,7 @@ Array [
     All your employees
   </h1>,
   <div
-    className="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth"
+    className="MuiFormControl-root MuiTextField-root makeStyles-search MuiFormControl-fullWidth"
   >
     <label
       className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
@@ -266,7 +266,7 @@ Array [
     All your employees
   </h1>,
   <div
-    className="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth"
+    className="MuiFormControl-root MuiTextField-root makeStyles-search MuiFormControl-fullWidth"
   >
     <label
       className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
@@ -323,6 +323,13 @@ Array [
       >
         <mui-card>
           <mui-card-action>
+            <img
+              alt="Contemplative Reptile"
+              className="MuiCardMedia-root makeStyles-photo MuiCardMedia-media MuiCardMedia-img"
+              height="140"
+              src="no-photo.jpg"
+              title="Contemplative Reptile"
+            />
             <a
               className="makeStyles-link undefined"
               href="/employees/details/employee-1"
@@ -353,6 +360,13 @@ Array [
       >
         <mui-card>
           <mui-card-action>
+            <img
+              alt="Contemplative Reptile"
+              className="MuiCardMedia-root makeStyles-photo MuiCardMedia-media MuiCardMedia-img"
+              height="140"
+              src="no-photo.jpg"
+              title="Contemplative Reptile"
+            />
             <a
               className="makeStyles-link undefined"
               href="/employees/details/employee-2"

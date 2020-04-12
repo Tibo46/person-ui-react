@@ -13,11 +13,13 @@ const theme = createMuiTheme({
   },
   overrides: {
     MuiTypography: {
-      h3: {
-        marginTop: '2rem',
-        marginBottom: '1.5rem',
-        fontSize: '1rem',
-        fontStyle: 'italic',
+      h1: {
+        fontSize: '2rem',
+        marginBottom: '1rem',
+      },
+      h2: {
+        fontSize: '1.5rem',
+        marginBottom: '1rem',
       },
     },
     MuiInputLabel: {

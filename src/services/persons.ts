@@ -3,7 +3,7 @@ import { get, post } from '../utils/http';
 import { Group } from './groups';
 
 export const Person = t.intersection([
-  t.partial({ id: t.string, group: Group }),
+  t.partial({ id: t.string, group: Group, photo: t.string }),
   t.strict({
     name: t.string,
     groupId: t.number,

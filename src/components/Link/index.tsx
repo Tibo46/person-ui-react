@@ -5,8 +5,9 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
   link: {
-    textDecoration: 'none'
-  }
+    color: '#D14575',
+    textDecoration: 'none',
+  },
 });
 
 interface IProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
