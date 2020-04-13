@@ -44,7 +44,7 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-## DESIGN
+## UX
 
 This project is using [Material UI](https://material-ui.com/) for a better consistent UX.<br />
 Some styles were overridden in [App.tsx](https://github.com/Tibo46/person-ui-react/blob/master/src/App.tsx) in order to use [Neumorphism](https://uxdesign.cc/neumorphism-in-user-interfaces-b47cef3bf3a6) concept styling
