@@ -1,7 +1,9 @@
 # PERSON UI
 
 This React UI allows you to add, search and see the details of your employees.
+
 It consumes [Person API](https://github.com/Tibo46/person-api)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## PREREQUISITE
