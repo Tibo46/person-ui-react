@@ -1,9 +1,7 @@
 # PERSON UI
 
-This React UI allows you to add, search and see the details of your employees.
-
-It consumes [Person API](https://github.com/Tibo46/person-api)
-
+This React UI allows you to add, search and see the details of your employees.<br />
+It consumes [Person API](https://github.com/Tibo46/person-api)<br />
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## PREREQUISITE
@@ -13,9 +11,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## ENVIRONMENT CONFIGURATION
 
-In the root of this repository you can find a .env file.
+In the root of this repository you can find a .env file.<br />
 This file contains the environment variables, such as the API url.
-If your Person API runs in a different address than http://localhost:5000, change the value of `REACT_APP_PERSON_API_ORIGIN` to the correct URL.
+
+If your Person API runs in a different address or port than http://localhost:5000, change the value of `REACT_APP_PERSON_API_ORIGIN` to the correct URL.<br />
 After any .env change, you need to stop and restart your application.
 
 ## AVAILABLE SCRIPTS
@@ -44,3 +43,8 @@ The build is minified and the filenames include the hashes.<br />
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+## DESIGN
+
+This project is using [Material UI](https://material-ui.com/) for a better consistent UX.<br />
+Some styles were overridden in [App.tsx](https://github.com/Tibo46/person-ui-react/blob/master/src/App.tsx) in order to use [Neumorphism](https://uxdesign.cc/neumorphism-in-user-interfaces-b47cef3bf3a6) concept styling
