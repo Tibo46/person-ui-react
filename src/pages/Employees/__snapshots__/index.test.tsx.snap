@@ -322,19 +322,19 @@ Array [
         xs={12}
       >
         <mui-card>
-          <mui-card-action>
-            <img
-              alt="Contemplative Reptile"
-              className="MuiCardMedia-root makeStyles-photo MuiCardMedia-media MuiCardMedia-img"
-              height="140"
-              src="no-photo.jpg"
-              title="Contemplative Reptile"
-            />
-            <a
-              className="makeStyles-link undefined"
-              href="/employees/details/employee-1"
-              onClick={[Function]}
-            >
+          <a
+            className="makeStyles-link undefined"
+            href="/employees/details/employee-1"
+            onClick={[Function]}
+          >
+            <mui-card-action>
+              <img
+                alt="Contemplative Reptile"
+                className="MuiCardMedia-root makeStyles-photo MuiCardMedia-media MuiCardMedia-img"
+                height="140"
+                src="no-photo.jpg"
+                title="Contemplative Reptile"
+              />
               <mui-card-content>
                 <h2
                   className="MuiTypography-root MuiTypography-h2 MuiTypography-gutterBottom"
@@ -347,8 +347,8 @@ Array [
                   Chemist
                 </p>
               </mui-card-content>
-            </a>
-          </mui-card-action>
+            </mui-card-action>
+          </a>
         </mui-card>
       </mui-grid>
       <mui-grid
@@ -359,19 +359,19 @@ Array [
         xs={12}
       >
         <mui-card>
-          <mui-card-action>
-            <img
-              alt="Contemplative Reptile"
-              className="MuiCardMedia-root makeStyles-photo MuiCardMedia-media MuiCardMedia-img"
-              height="140"
-              src="no-photo.jpg"
-              title="Contemplative Reptile"
-            />
-            <a
-              className="makeStyles-link undefined"
-              href="/employees/details/employee-2"
-              onClick={[Function]}
-            >
+          <a
+            className="makeStyles-link undefined"
+            href="/employees/details/employee-2"
+            onClick={[Function]}
+          >
+            <mui-card-action>
+              <img
+                alt="Contemplative Reptile"
+                className="MuiCardMedia-root makeStyles-photo MuiCardMedia-media MuiCardMedia-img"
+                height="140"
+                src="no-photo.jpg"
+                title="Contemplative Reptile"
+              />
               <mui-card-content>
                 <h2
                   className="MuiTypography-root MuiTypography-h2 MuiTypography-gutterBottom"
@@ -384,8 +384,8 @@ Array [
                   Commercial
                 </p>
               </mui-card-content>
-            </a>
-          </mui-card-action>
+            </mui-card-action>
+          </a>
         </mui-card>
       </mui-grid>
     </mui-grid>

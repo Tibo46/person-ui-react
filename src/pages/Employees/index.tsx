@@ -60,16 +60,16 @@ const Employees = () => {
             personsResult.data.map((person: Person, index: number) => (
               <Grid item={true} key={`party-${index}`} xl={3} md={4} sm={6} xs={12}>
                 <Card>
-                  <CardActionArea>
-                    <CardMedia
-                      className={classes.photo}
-                      component="img"
-                      alt="Contemplative Reptile"
-                      height="140"
-                      image={person.photo ? person.photo : NoPhoto}
-                      title="Contemplative Reptile"
-                    />
-                    <Link href={`employees/details/${person.id}`}>
+                  <Link href={`employees/details/${person.id}`}>
+                    <CardActionArea>
+                      <CardMedia
+                        className={classes.photo}
+                        component="img"
+                        alt="Contemplative Reptile"
+                        height="140"
+                        image={person.photo ? person.photo : NoPhoto}
+                        title="Contemplative Reptile"
+                      />
                       <CardContent>
                         <Typography gutterBottom variant="h2">
                           {person.name}
@@ -78,8 +78,8 @@ const Employees = () => {
                           {person.group?.name}
                         </Typography>
                       </CardContent>
-                    </Link>
-                  </CardActionArea>
+                    </CardActionArea>
+                  </Link>
                 </Card>
               </Grid>
             ))
