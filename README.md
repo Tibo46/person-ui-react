@@ -7,6 +7,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## PREREQUISITE
 
 - [Node.js and npm](https://nodejs.org/en/) installed globally
+- Run `npm install` once the repository is cloned to
 
 ## ENVIRONMENT CONFIGURATION
 

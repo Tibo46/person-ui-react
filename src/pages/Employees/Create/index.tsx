@@ -14,6 +14,7 @@ const CreateEmployee = () => {
   const history = useHistory();
   const [employeeGroup, setEmployeeGroup] = useState(1);
   const [employeeName, setEmployeeName] = useState('');
+  const [employeePhoto, setEmployeePhoto] = useState('');
 
   const groupsResult = useAsync({
     promiseFn: getGroups,
@@ -26,6 +27,7 @@ const CreateEmployee = () => {
       const person: Person = {
         name: employeeName,
         groupId: employeeGroup,
+        photo: employeePhoto,
       };
 
       let newPerson: Person;
@@ -86,6 +88,20 @@ const CreateEmployee = () => {
                   )}
                 </TextField>
               </Grid>
+            </Grid>
+            <Grid item={true} sm={12}>
+              <TextField
+                autoComplete="off"
+                fullWidth={true}
+                variant="outlined"
+                name="employee-photo"
+                label="Employee photo url"
+                placeholder="https://myimagedomain.com/grumpycat.jpg"
+                value={employeePhoto}
+                onChange={(e) => {
+                  setEmployeePhoto(e.target.value);
+                }}
+              />
             </Grid>
             <Grid item={true}>
               <Button

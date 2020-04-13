@@ -114,6 +114,9 @@ describe('Create Employee page', () => {
       component
         .find('input[name="employee-name"]')
         .simulate('change', { target: { value: 'Gustavo Fring' } });
+      component
+        .find('input[name="employee-photo"]')
+        .simulate('change', { target: { value: 'https://mock-img/grumpycat.jpg' } });
     });
     component!.update();
     await act(async () => {
@@ -123,7 +126,7 @@ describe('Create Employee page', () => {
     expect(fetchMock.calls()).toHaveLength(2);
     expect(fetchMock.calls()[1][0]).toBe('https://mock-api.com/persons');
     expect(fetchMock.calls()[1][1]?.body).toBe(
-      JSON.stringify({ name: 'Gustavo Fring', groupId: 1 })
+      JSON.stringify({ name: 'Gustavo Fring', groupId: 1, photo: 'https://mock-img/grumpycat.jpg' })
     );
   });
 
